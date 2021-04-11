@@ -31,6 +31,12 @@
 			setTimeout(next, {{delay}});
 {{/delay}}
 {{/nextId}}
+    			document.addEventListener('keydown', function(e) {
+				switch (e.keyCode) {
+					case 37:prev();break;
+					case 39:next();break;
+			});
+				
 			var img, imgcontainer, zoomed = false;
 
 			function fit(event) {
